@@ -1,6 +1,6 @@
 null :=
 SPACE := $(null) $(null)
-exec = $(notdir $(subst $(SPACE),_,$(PWD)))
+exec = $(notdir $(subst $(SPACE),_,$(PWD))).out
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
 flags = -g
@@ -17,6 +17,10 @@ $(exec): $(objects)
 install:
 	make
 	cp ./$(exec) /usr/local/bin/$(exec)
+	make clean
+
+uninstall:
+	rm /usr/local/bin/$(exec)
 	make clean
 
 clean:
