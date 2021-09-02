@@ -19,6 +19,10 @@ install:
 	cp ./$(exec) /usr/local/bin/$(exec)
 	make clean
 
+uninstall:
+	rm /usr/local/bin/$(exec)
+	make clean
+
 clean:
 	rm $(exec)
 	rm src/*.o
