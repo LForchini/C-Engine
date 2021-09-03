@@ -4,7 +4,7 @@
 
 int main()
 {
-    Engine *engine = engine_create("SDL Template", 640, 480);
+    Engine *engine = engine_create("SDL Template", 640, 480, ENGINE_PXM_DISABLE);
     engine->memory = (Memory *)malloc(sizeof(Memory));
 
     engine_run(engine);
