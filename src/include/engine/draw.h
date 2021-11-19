@@ -20,11 +20,11 @@ void engine_set_pixel(Engine *engine, int x, int y, int r, int g, int b)
     engine->pixels[4 * (x + engine->width * y) + 3] = 255;
 }
 
-void engine_get_pixel(Engine *engine, int x, int y, int *r, int *g, int *b)
+void engine_get_pixel(Engine *engine, int x, int y, int &r, int &g, int &b)
 {
-    *r = engine->pixels[4 * (x + engine->width * y)];
-    *g = engine->pixels[4 * (x + engine->width * y) + 1];
-    *b = engine->pixels[4 * (x + engine->width * y) + 2];
+    r = engine->pixels[4 * (x + engine->width * y)];
+    g = engine->pixels[4 * (x + engine->width * y) + 1];
+    b = engine->pixels[4 * (x + engine->width * y) + 2];
 }
 
 void engine_fill_circle(Engine *engine, int x, int y, int r)
