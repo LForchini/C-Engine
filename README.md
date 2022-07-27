@@ -15,10 +15,6 @@ Once I do that, I will update installation instructions.
 
 Install SDL2 using `brew install --cask sdl2`
 
-### Linux (apt)
-
-Install SDL2 using `sudo apt-get install sdl2`
-
 ### Linux (pacman)
 
 Install SDL2 using `sudo pacman -Syu sdl2`
